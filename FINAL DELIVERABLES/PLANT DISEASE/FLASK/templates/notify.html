@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> predict</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+$(function () {
+    $("#fileupload").change(function () {
+        $("#dvPreview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#dvPreview").show();
+                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#dvPreview").show();
+                    $("#dvPreview").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#dvPreview img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
+</head>
+<style>
+  body {background-color:#D6EAF8;}
+  </style>
+
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Government Subsidy</a>
+      </div>
+      
+    </div>
+    </nav>
+    <span style="font-size:16px">
+    <span style="font-family:times new roman">
+   <h4>The Standing Committee on Chemicals and Fertilizers (Chair: Ms. K. Kanimozhi) submitted its report on the subject ‘System of Fertilizer Subsidy’ on March 17, 2020.  The central government provides subsidy to fertilizer manufacturers and importers so that farmers can buy them at affordable prices.  Key observations and recommendations of the Committee include:
+    <li><b>Change in the subsidy policy:</b>The Committee noted that fertilizer subsidy resulted in a tremendous growth of agricultural productivity, which was necessary for food security of the huge population of the country.   However, it has also lead to negative effects such as over-use of fertilizers, their imbalanced use, and the resultant soil degradation.  The Committee observed that the government is studying the existing subsidy regime and possible mechanisms which can improve the policy further.  In this context, NITI Aayog has circulated its draft report to various stakeholders.</li>
+    
+    The Committee noted that any drastic change in the existing fertilizer subsidy policy would have a huge bearing on the food security of the country.  It recommended that: (i) any such drastic change must be effected only after an in-depth study and wider consultations with all stakeholders (including the concerned central and state government departments, fertilizer industry, and farmers and their associations), (ii) no hasty decision should be taken, (iii) interests of small and marginal farmers should be firmly kept in mind, and (iv) best international practices should be carefully studied.  It also recommended that education and awareness of farmers about the balanced use of fertilizers should be an integral part of the policy.
+    Direct subsidy to farmers:  The Committee observed that many fertilizer manufacturing plants are operating with very old technology and systems, and not at their highest efficiency.   The government bears the cost of their inefficiency in the form of higher subsidy.  The Committee recommended that the companies should be set free to manufacture, supply, and sell fertilizers as per their own system.  A farmer should have the choice of buying from various brands of fertilizers, while getting the subsidy directly in his bank account.  Such a system will push manufacturers to produce and sell fertilizers in the most cost-effective manner, and push the inefficient ones out.  It also recommended that the government should set out a clear and firm roadmap to switch to a system where farmers directly get the subsidy and the manufacturing and importing of fertilizers is set free to the market forces.
+    Delay in paying subsidy dues:  The Committee noted that due to the non-payment of subsidy bills received from companies, there is a huge carryover of subsidy liabilities every year.  At the end of 2017-18, 2,688 subsidy bills worth Rs 19,363 crore were pending for settlement.  At the end of 2018-19, 9,223 subsidy bills worth Rs 30,244 crore were pending.  The Committee noted that scarcity of funds due to an inadequate budget allocation is the major reason for the delay in settlement.  The Committee recommended that the Department of Fertilizers should place before the Ministry of Finance the exact requirement of funds for providing the subsidy, and impress upon the need to make an adequate budget allocation for this purpose.
+    The Committee noted that the government allows the fertilizer manufacturing companies to take loans from banks, against their unpaid subsidy bills, to avert their financial difficulties.  The government bears the cost of interest payable on these loans.  The Committee recommended that to avoid unnecessary expenditure on payment of interest on these loans, a one-time additional budget allocation may be sought from the Ministry of Finance to clear all the pending dues.
+    The Committee noted that very often, the amount held up due to delay in payment of subsidy is fairly high, and in some cases, the delay is unusually long.  As per policy guidelines, the subsidy claims submitted by fertilizer companies are required to be settled within seven working days.  The Committee recommended that the Department of Fertilizers should develop a system by which a certain proportion of the amount of claim (such as 75%) is paid automatically within this period, without any lengthy scrutiny.   The remaining amount should also be paid off in a fixed period of time subject to the submission of all documentation.
+    Expenditure on subsidy:   The Committee observed that over the years, the government’s expenditure on fertilizer subsidy has been increasing.   It noted that while it is necessary to keep providing the subsidy, it is also the government’s responsibility to contain this expenditure by adopting innovative ways without increasing the prices.  The Committee recommended that the government should take all possible steps to reduce its expenditure on subsidy by: (i) modernising fertilizer manufacturing plants, (ii) adopting best practices of manufacturing and strict energy norms, and (iii) building a strong research and development base for continuously upgrading the manufacturing technology, so as to reduce the manufacturing cost.</h4> 
+    </span></span><a href="index.html"><< Go Back</a>
+            
+
+    </form>
+
+</head>
+</html>
+
+
